@@ -1,18 +1,26 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <%= link_to current_user.name, edit_user_path(current_user) %>
+    <a href="#">Tomさん</a>
   </div>
   <div class="create-room">
-    <%= link_to "チャットを作成する", new_room_path %>
+    <a href="#">記録する</a>
   </div>
 </div>
 
 <div class="rooms">
-  <% current_user.rooms.each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <%= link_to room.name, room_messages_path(room) %>
-      </div>
+  <div class="room">
+    <div class="room-name">
+      <%= Date.current.strftime('%Y/%m/%d') %><br>
+      <a>28週4日 妊娠8ヶ月</a>
     </div>
-  <% end %>
+    <div class="room-name">
+      <a>予定日まで</a>
+      <a class="room-name-yoteibi">80日</a>
+    </div>
+  </div>
+  <div class="room">
+    <div class="room-name">
+      <%= image_tag '/flower3.png', class:"post-image", :size => '270x350' %>
+    </div>
+  </div>
 </div>

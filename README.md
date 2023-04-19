@@ -16,18 +16,19 @@
 
 - has_many :article
 
-## article テーブル
+## articles テーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | -----------                    |
-| date      | date       | null: false                    |
-| weight    | float      |                                |
-| meal      | string     |                                |
-| exercise  | string     |                                |
-| condition | integer    | null: false                    |
-| disease   | string     |                                |
-| diary     | string     |                                |
-| user      | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | -----------                    |
+| datetime      | date       | null: false                    |
+| weight        | float      |                                |
+| target_weight | float      |                                |
+| meal          | string     |                                |
+| exercise      | string     |                                |
+| condition     | integer    |                                |
+| disease       | string     |                                |
+| diary         | string     |                                |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 

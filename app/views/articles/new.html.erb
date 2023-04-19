@@ -1,0 +1,50 @@
+<h1>記録をしましょう</h1>
+
+<%= form_with(model: @article, local: true) do |form| %>
+
+  <div class="time">
+    <%= form.label :日付 %>
+    <%= form.datetime_select :start_time %>
+  </div>
+
+  <div class="weight">
+    <%= form.label :体重 %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div class="target_weight">
+    <%= form.label :目標体重 %>
+    <%= form.text_field :target_weight %>
+  </div>
+
+  <div class="meal">
+    <%= form.label :食事 %>
+    <%= form.text_area :meal %>
+  </div>
+
+  <div class="exercise">
+    <%= form.label :運動 %>
+    <%= form.text_area :exercise %>
+  </div>
+
+  <div class="condition">
+    <%= form.label :調子 %>
+    <%= form.text_field :condition %>
+  </div>
+
+  <div class="disease">
+    <%= form.label :疾患 %>
+    <%= form.text_area :disease %>
+  </div>
+
+  <div class="diary">
+    <%= form.label :メモ %>
+    <%= form.text_area :diary %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit %>
+    <%=link_to 'もどる', root_path %>
+  </div>
+
+<% end %>
