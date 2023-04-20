@@ -15,6 +15,12 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
+    #Article.create(article_params)
+    #redirect_to root_path
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 
   private

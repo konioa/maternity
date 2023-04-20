@@ -1,9 +1,9 @@
-<%= month_calendar articles: @articles do |date, articles| %>
+<%= month_calendar events: @articles do |date, articles| %>
   <%= date.day %>
-
   <% articles.each do |article| %>
     <div>
-      <%= article.weight %>
+      <%= link_to article.meal, edit_article_path(article) %>
     </div>
   <% end %>
 <% end %>
+

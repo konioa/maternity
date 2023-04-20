@@ -7,7 +7,7 @@
 | nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| pre_weight         | float  | null: false               |
+| pre_weight         | float  |                           |
 | last_date          | date   |                           |
 | due_date           | date   |                           |
 

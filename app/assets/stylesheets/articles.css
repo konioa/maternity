@@ -51,16 +51,16 @@
 .date-name-yoteibi{
   font-size: 24px;
   color: #6699FF;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 10px 10px;
   font-family: 'Arial','Courier','メイリオ',sans-serif;
 }
 
 .date-image{
-  margin-top: 0px 0px 0px 10px;
+  margin-top: 30px;
 }
 
 .calender-main {
-  background-color: #F4F4F9;
+  background-color: #ffffff;
   width: calc(100vw - 250px);
   padding: 20px;
 }
@@ -168,4 +168,3 @@
 .hidden {
   display: none;
 }
-
