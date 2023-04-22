@@ -9,6 +9,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.integer :condition
       t.string :disease
       t.string :diary
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end

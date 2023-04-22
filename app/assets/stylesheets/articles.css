@@ -168,3 +168,22 @@
 .hidden {
   display: none;
 }
+
+.header__bar {
+  display: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.grid-6 {
+  color: #330000;
+  padding-right: 20px;
+  font-family:  "Courier New", "Courier", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.user_nav {
+  position: absolute;
+  right: 10px;
+  top: 65px;
+}
