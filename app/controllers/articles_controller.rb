@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :move_to_signed_in, omly: [:index]
 
   def index
     @articles = Article.all
@@ -27,5 +28,12 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:start_time, :weight, :target_weight, :meal, :exercise, :condition, :disease, :diary)
+  end
+
+  def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  '/tops/'
+    end
   end
 end

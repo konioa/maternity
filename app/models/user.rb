@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :articles
   
-  validates :password, presence: true, length: { minimum: 6 }
   validates :nickname, presence: true
+  validates :password, presence: true, length: { minimum: 6 }
+  
 end
