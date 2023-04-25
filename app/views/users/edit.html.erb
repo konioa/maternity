@@ -1,33 +1,70 @@
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
-      <h2>Edit Account</h2>
-      <h5>アカウントの編集</h5>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-      <%= link_to "チャットページに戻る", :back, class: 'btn'%>
+      <h2>アカウント編集</h2>
+      <h5>編集してください</h5>
+      <%= link_to "チャットページに戻る", root_path, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: current_user, local: true do |f|%>
+      <%= form_with model: cureen url: user_registration_path, local: true do |f|%>
+        <%= render "devise/shared/error_messages", model: f.object %>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :name%>
+            <%= f.label :ニックネーム%>
           </div>
           <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+            <%= f.text_field :nickname, autofocus: true%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :メールアドレス%>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
           </div>
         </div>
-        <div class='actions'>
-          <%= f.submit "Update", class: 'btn'%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :パスワード%>
+            <i>(英数字6文字以上)</i>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "off"%>
+          </div>
         </div>
-      <% end %>
-    </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :パスワード確認%>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password_confirmation, autocomplete: "off"%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :妊娠前体重%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :pre_weight, autofocus: true%>
+          </div>
+          <div class='field-label'>
+            <%= f.label :最終月経開始日%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :last_date, autofocus: true%>
+          </div>
+          <div class='field-label'>
+            <%= f.label :出産予定日%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :due_date, autofocus: true%>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "Create Account", class: 'btn'%>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

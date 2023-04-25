@@ -3,7 +3,7 @@
     <div class='account-page__inner--left account-page__header'>
       <h2>ログイン</h2>
       <h5>登録しているユーザーでログインしてください</h5>
-      <%= render "devise/shared/links"%>
+      <%#= render "devise/shared/links"%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: @user, url: user_session_path, local: true do |f|%>
