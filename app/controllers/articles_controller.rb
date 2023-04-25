@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
 
   def move_to_signed_in
     unless user_signed_in?
-      #サインインしていないユーザーはログインページが表示される
+      #サインインしていないユーザーはログインページが表示されるる
       redirect_to  '/tops/'
     end
   end
